@@ -4,7 +4,7 @@ flow_config:
                 rho: 1.
                 inflow: "constant"
         geometry_params:
-                mesh: "/home/fenics/drl_projects/MeshDQN/xdmf_files/ys930_0.15000_triangle.xdmf"
+                mesh: "./xdmf_files/ys930_0.15000_triangle.xdmf"
         solver_params:
                 dt: 0.001
                 solver_type: 'lu'

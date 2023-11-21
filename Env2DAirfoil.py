@@ -125,13 +125,13 @@ class Env2DAirfoil(Env):
                     self.p.append(p.copy(deepcopy=True))
         else: # Load saved values
             self.original_u, self.original_p, self.p, self.u = ([] for i in range(4))
-            self.velocities = np.load("/home/fenics/drl_projects/MeshDQN/" + self.plot_dir + \
+            self.velocities = np.load("./" + self.plot_dir + \
                                       "/snapshots/velocities.npy")
-            self.pressures = np.load("/home/fenics/drl_projects/MeshDQN/" + self.plot_dir + \
+            self.pressures = np.load("./" + self.plot_dir + \
                                      "/snapshots/pressures.npy")
-            save_us = np.load("/home/fenics/drl_projects/MeshDQN/" + self.plot_dir + \
+            save_us = np.load("./" + self.plot_dir + \
                               "/snapshots/save_velocities.npy")
-            save_ps = np.load("/home/fenics/drl_projects/MeshDQN/" + self.plot_dir + \
+            save_ps = np.load("./" + self.plot_dir + \
                               "/snapshots/save_pressures.npy")
             for i in range(int(np.ceil(self.solver_steps/self.save_steps))):
                 # This will almost certainly break down with any change in underlying fenics data structure
